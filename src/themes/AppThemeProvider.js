@@ -1,5 +1,6 @@
 import React from 'react'
 import { createTheme, ThemeProvider } from '@mui/material'
+import { grey, pink } from '@mui/material/colors'
 const AppThemeProvider = (prop) => {
     const theme = createTheme({
         typography: {
