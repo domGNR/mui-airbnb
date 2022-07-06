@@ -1,7 +1,8 @@
 import { Box, Container } from '@mui/material'
-
 import Logo from './Logo'
+import LocationSearch from './LocationSearch'
 import { flexBetweenCenter, dFlex }  from '../themes/CommonStyles'
+import ProfileSettings from './ProfileSettings'
 
 const Header = () => {
   return (
@@ -20,6 +21,8 @@ const Header = () => {
               px:4,
             }}>
                 <Logo />
+                <LocationSearch />
+                <ProfileSettings />
             </Box>
         </Container>
     </Box>
