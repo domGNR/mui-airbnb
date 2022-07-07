@@ -1,8 +1,9 @@
 import { Box, Container } from '@mui/material'
 import Logo from './Logo'
 import LocationSearch from './LocationSearch'
-import { flexBetweenCenter, dFlex }  from '../themes/CommonStyles'
+import { flexBetweenCenter, dFlex, displayOnDesktop }  from '../themes/CommonStyles'
 import ProfileSettings from './ProfileSettings'
+import MobileSearch from './MobileSearch'
 
 const Header = () => {
   return (
@@ -20,9 +21,18 @@ const Header = () => {
               minHeight:70,
               px:4,
             }}>
+              <Box sx={{...displayOnDesktop}}>
                 <Logo />
+              </Box>
+              <Box sx={{...displayOnDesktop}}>
                 <LocationSearch />
+              </Box>
+              <Box sx={{...displayOnDesktop}}>
                 <ProfileSettings />
+              </Box>
+              <Box sx={{display:{xs:'flex',md:'none'}}}>
+                <MobileSearch />
+              </Box>
             </Box>
         </Container>
     </Box>
