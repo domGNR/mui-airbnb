@@ -11,10 +11,11 @@ const Logo = () => {
         ml:1,
         color: theme=> theme.palette.secondary.main,
         fontSize:'20px',
-        fontWeight:'bold',
+        fontWeight:'800',
+        textTransform:'none'
       }}
       component='h3'>
-        airBnb
+        airbnb
       </Typography>
     </Box >
   )

@@ -1,7 +1,10 @@
-import { CssBaseline, Box } from "@mui/material";
+import { CssBaseline, Box, Container } from "@mui/material";
 import Header from "./components/Header";
 import OptionsTab from "./components/OptionsTab";
 import LocationCards from "./components/LocationCards";
+import Footer from "./components/Footer";
+import { displayOnDesktop } from "./themes/CommonStyles";
+import FooterMenu from "./components/FooterMenu";
 function App() {
   return (
     <>
@@ -11,14 +14,36 @@ function App() {
           display: "flex",
           flexDirection: "column",
           height: "100vh",
-          // border:'1px solid red'
+          overflowY: "scroll",
         }}
       >
-        <Box>
+        <Box
+          sx={{
+            position: "sticky",
+            zIndex: 1000,
+            backgroundColor: "white",
+            top: 0,
+          }}
+        >
           <Header />
           <OptionsTab />
         </Box>
-        <LocationCards/>
+
+        <Box
+          sx={{
+            mx: 8,
+            mt: 2,
+          }}
+        >
+          <LocationCards />
+        </Box>
+          
+          <Box sx={displayOnDesktop}>
+            <Footer />
+          </Box>
+          <Box sx={{ display:{xs:'block',md:'none'}}}>
+            <FooterMenu />
+          </Box>
       </Box>
     </>
   );
